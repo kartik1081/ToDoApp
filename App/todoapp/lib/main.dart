@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:todoapp/UI/intray/intray_page.dart';
 import 'package:todoapp/modles/global.dart';
 
 void main() {
@@ -30,23 +30,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new SafeArea(
       child: new DefaultTabController(
-        length: 4,
+        length: 3,
         child: new Scaffold(
           body: new Stack(
             children: [
               new TabBarView(
                 children: [
-                  new Container(
-                    color: Color(0xFF212128),
-                  ),
+                  new IntrayPage(),
                   new Container(
                     color: Colors.orange,
                   ),
                   new Container(
                     color: Colors.lightGreen,
-                  ),
-                  new Container(
-                    color: Colors.red,
                   ),
                 ],
               ),
@@ -99,9 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Tab(
                 icon: new Icon(Icons.perm_identity),
               ),
-              Tab(
-                icon: new Icon(Icons.settings),
-              )
             ],
             labelColor: Colors.yellow,
             unselectedLabelColor: Colors.blue,
