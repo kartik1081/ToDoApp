@@ -56,6 +56,7 @@ class _IntrayPageState extends State<IntrayPage> {
     );
   }
 
+  // ignore: unused_element
   void _onReorder(int oldIndex, int newIndex) {
     setState(() {
       if (newIndex > oldIndex) {
